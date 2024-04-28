@@ -15,11 +15,12 @@ $blood = $_POST['group'];
 $district = $_POST['district'];
 $state = $_POST['state'];
 $nation = $_POST['nation'];
-$height = $_POST['height'];
 $weight = $_POST['weight'];
 $gender = $_POST['gender'];
+$addiction = $_POST['addiction'];
+$disease = $_POST['disease'];
 // if ($_REQUEST['btn'] == "insert") {
-$sql = "INSERT INTO blood (FULL_NAME, DOB, BLOODGROUP, DISTRICT, STATE, NATION, HEIGHT, WEIGHT, GENDER) VALUES ('$fullname', '$dob', '$blood', '$district', '$state', '$nation', '$height', '$weight', '$gender');";
+$sql = "INSERT INTO blood (FULL_NAME, DOB, BLOODGROUP, DISTRICT, STATE, NATION, WEIGHT, GENDER, ADDICTION, DISEASE) VALUES ('$fullname', '$dob', '$blood', '$district', '$state', '$nation', '$weight', '$gender', '$addiction', '$disease');";
 if (mysqli_query($conn, "$sql")) {
     header("Location: http://localhost/Kshat_Suraksha/");
     exit;

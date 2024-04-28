@@ -7,9 +7,9 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="style3.css" />
     <link rel="stylesheet" href="style_header.css" />
   </head>
@@ -81,11 +81,6 @@
             <span class="title">Medical History</span>
             <div class="fields">
               <div class="input-field">
-                <label>Height (cm)</label>
-                <input type="number" placeholder="Enter your height" name="height" required />
-              </div>
-
-              <div class="input-field">
                 <label>Weight (kg)</label>
                 <input type="number" placeholder="Enter your weight" name="weight" required />
               </div>
@@ -96,6 +91,18 @@
                   <option value="none">No Addiction</option>
                   <option value="alcohol">Alcohol</option>
                   <option value="cigarette">Cigarette</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="input-field">
+                <label>Chronic Disease (if any)</label>
+                <select name="disease" required>
+                  <option value="none">No Disease</option>
+                  <option value="aids">AIDS</option>
+                  <option value="cancer">Cancer</option>
+                  <option value="hepatitis">Hepatitis</option>
+                  <option value="hiv">HIV</option>
                   <option value="other">Other</option>
                 </select>
               </div>
