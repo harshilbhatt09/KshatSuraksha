@@ -1,0 +1,224 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Reddit;
+}
+
+:root{
+    --var-primary-color : #D21312;
+}
+html{
+    font-size: 62.5%;
+}
+
+h1,h2,h3,h4{
+    font-family: 'Times New Roman', Times, serif;
+}
+h1{
+    font-size: 4.2rem;
+}
+h2{
+
+    font-size: 3rem;
+    padding: 0.5rem 1rem;
+}
+p{
+    font-size:2rem ;
+    letter-spacing: 0.08rem;
+}
+
+button{
+
+    border: 0.1rem solid white;
+    margin-top: 1rem;
+    min-width: 10rem;
+    outline: none;
+    padding: .6rem 1.2rem;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    letter-spacing: 0.05rem;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+/* REGISTRATION PAGE STYLING  */
+.registration-header{
+    height: 100vh;
+    background: rgb(214,111,142);
+background: radial-gradient(circle, rgba(214,111,142,1) 24%, rgba(244,5,5,0.8436624649859944) 100%);
+}
+
+.container{
+    height: 10vh;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a{
+
+    font-size: 3.3rem;
+    font-weight: bold;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    gap: 2.9rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+li > a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+/* home page styling  */
+
+/* registration page styling  */
+main{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-two--column{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.login , .regiter {
+    height: 90rem;
+    width: 100rem;
+    min-height: 30rem;
+    min-width: 40vh;
+    background-color: rgb(214, 98, 55);
+}
+
+.form-text{
+    height: 90rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-image: linear-gradient(rgba(244, 58, 58, 0.5),rgba(244, 58, 58, 0.5)), url(back-ground-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center; */
+    background-color: aqua;
+    padding: 3rem 2rem;
+}
+
+.form-text p{
+
+    width: 30ch;
+    align-items: center;
+    margin: 2rem 3rem;
+}
+
+.form-text button{
+
+    background-color: #D21312;
+    color: aliceblue;
+}
+
+.form-text button:hover{
+    background-color: transparent;
+    color: aliceblue;
+}
+
+.registration-form , .login-form{
+
+    height: 90rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: chartreuse;
+}
+
+.registration-form p , .login-form p {
+
+    margin: 1rem  0.7rem;
+}
+
+.social-icons{
+    display: flex;
+    gap: 2.8rem;
+    margin: 0.4rem  0 0 0;
+}
+
+.fa-brands , .fa-solid{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    /* border: 0.1rem solid black; */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+
+}
+
+input{
+    width: 20rem;
+    margin: 0.7rem 0;
+    border: none;
+    background-color: rgb(187, 187, 187);
+    padding: 1rem 0.8rem;
+    letter-spacing: 0.06rem;
+}
+
+input[type="submit"]{
+
+    border: 0.1rem solid white;
+    margin-top: 1rem;
+    min-width: 10rem;
+    outline: none;
+    padding: .6rem 1.2rem;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    letter-spacing: 0.05rem;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+.regiter:not(.login-section--display){
+              display: none;
+}
+
+.login-section--display .regiter{
+    display: block;
+
+}
+.login-section--display .login{
+    display: none;
+}
+
+@media screen and (max-width:830px){
+    .grid-two--column{
+        grid-template-columns: 1fr;
+    }
+
+    .registration-header .container{
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

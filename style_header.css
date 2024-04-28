@@ -1,0 +1,18 @@
+html {
+    font-size: 62.5%;
+    /* 1rem=10px */
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: brown;
+}
+
+
+.logo {
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(196, 12, 12);
+    margin: 0 0 4rem 2rem;
+}
