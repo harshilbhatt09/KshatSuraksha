@@ -48,13 +48,19 @@
         <div class="container flex-box">
             <div class="form">
                 <h1>FIND THE DONOR HERE </h1>
+                    <table class="table">
                      <form action="database.php" method="post">
-                        <div class="name">
+                        
+                            <tr>
+                                <td>
                               <label for="name">NAME : </label>
-                              <input type="text" name="name" id="n1" placeholder="ENTER YOUR NAME">
+                              <input type="text" name="name" id="n1" placeholder="ENTER YOUR NAME"></td>
+                            </tr>
+                            <tr>
+                                <td>
                               <label for="blood group"></label>
-                            </div>
-                            <div>
+                         
+                        
                                 <label for="blood-group">SELECT BLOOD-GROUP :</label>
                                 <select required>
                                     <option value="">Select blood type</option>
@@ -68,17 +74,21 @@
                                     <option value="B">B-</option>
                                     <option value="AB">AB-</option>
                                   </select>
-                                
-                              </div>
-                              <div></div>
+                                </td></tr>
+                              
+                    
                      
-                     <div>
+                     
+                                <tr><td>
                         <label for="textarea">ADDRESS</label>
-          <textarea name="address" id="ad" cols="40" rows="5" placeholder="ENTER YOUR ADDRESS HERE"></textarea>
-                     </div>
+                        <input type="text" name="name" id="n1" placeholder="ENTER YOUR AREA"></td>
+                    </td></tr>
 
-                     <input type="submit" value="search" />
+                    <tr><td>
+                     <input type="submit" value="Search" />
+                    </td></tr>
                     </form>
+                    </table>
                 </div>
                 
                      <hr>
