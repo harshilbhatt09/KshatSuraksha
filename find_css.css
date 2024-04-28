@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    /* 1rem=10px */
+}
+
+.conatiner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+.form{
+    background-color: rgb(62, 216, 208);
+    height: 30rem;
+}
+
+.result{
+    background-color: brown;
+    height: 30rem;
+}
