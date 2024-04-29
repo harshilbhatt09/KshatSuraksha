@@ -20,7 +20,7 @@
             <!-- BRAND NAME -->
             <div class="container">
                 <div class="navbar-brand">
-        <a href="#" target="_blank" class="logo">क्षत Suraksha</a>
+        <a href="index.html" class="logo">क्षत Suraksha</a>
     </div>
         <!-- NAVBAR LIST -->
         <nav class="navbar">
@@ -49,20 +49,15 @@
             <div class="form">
                 <h1>FIND THE DONOR HERE </h1>
                     <table class="table">
-                     <form action="database.php" method="post">
+                     <form action="find.php" method="post">
                         
-                            <tr>
-                                <td>
-                              <label for="name">NAME : </label>
-                              <input type="text" name="name" id="n1" placeholder="ENTER YOUR NAME"></td>
-                            </tr>
-                            <tr>
+                            
                                 <td>
                               <label for="blood group"></label>
                          
                         
                                 <label for="blood-group">SELECT BLOOD-GROUP :</label>
-                                <select required>
+                                <select name="blood" required>
                                     <option value="">Select blood type</option>
                                     <option value="A+">A+</option>
                                     <option value="O+">O+</option>
@@ -81,7 +76,7 @@
                      
                                 <tr><td>
                         <label for="textarea">ADDRESS</label>
-                        <input type="text" name="name" id="n1" placeholder="ENTER YOUR AREA"></td>
+                        <input type="text" name="area" id="n1" placeholder="ENTER YOUR AREA"></td>
                     </td></tr>
 
                     <tr><td>
@@ -93,7 +88,51 @@
                 
                      <hr>
         <div class="result">
-            <h1>STOCK AVAILABILITY</h1>
+            <h1>STOCK AVAILABILITY</h1><br>
+
+            <?php
+            // Connect to your database
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "blood";
+
+            $conn = new mysqli($servername, $username, $password, $dbname);
+
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                // Handle form submission
+                $address = $_POST['area']; // Assuming you are passing the address from the form
+            
+                // Construct SQL query to check if the address exists in the database
+                $sql = "SELECT * FROM blood WHERE AREA = '$address'"; // Replace 'your_table' with your table name and 'address' with your column name
+                echo "<table border='1' >
+    <tr>
+    <th>Name</th>
+    <th>blood-type</th>
+    <th>Address</th>
+   
+    </tr>";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    // Output data of each row
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<tr>
+            <td>" . $row["FULL_NAME"] . "</td>
+            <td>" . $row["BLOODGROUP"] . "</td>
+            <td>" . $row["AREA"] . "</td> 
+            </tr>";
+                    }
+                } else {
+                    echo "No results found for the address: " . $address;
+                }
+            }
+            ?>
         </div>
     </div>           
                     </main>            

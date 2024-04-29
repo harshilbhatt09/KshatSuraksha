@@ -1,29 +1,151 @@
-*{
+/* Resetting default margin and padding */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
-    font-size: 62.5%;
-    /* 1rem=10px */
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f34949;
+    color: #333;
 }
 
-.conatiner{
+/* Container styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styles */
+.section-navbar {
+    background-color: #fffdfe;
+    color: #fff;
+    padding: 20px 0;
+    height: 80px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.navbar-list {
+    list-style-type: none;
+}
+
+.navbar-list li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navbar-list li:last-child {
+    margin-right: 0;
+}
+
+.navbar-btn {
+    /* padding: 10px 20px; */
+    margin-top:0px;
+    background-color: #fff;
+    color: #f12314;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.navbar-btn:hover {
+    background-color: #f12525;
+    color: #fff;
+}
+
+/* Main styles */
+main {
+    padding: 40px 0;
+}
+
+.flex-box {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-
-    
 }
 
-.form{
-    background-color: rgb(62, 216, 208);
-    height: 30rem;
+.form {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.result{
-    background-color: brown;
-    height: 30rem;
+.form h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.table {
+    width: 100%;
+}
+
+.table tr td {
+    padding: 10px;
+}
+
+.table tr td label {
+    display: block;
+    margin-bottom: 5px;
+    font-family:'Lucida Sans';
+}
+
+.table tr td input[type="text"],
+.table tr td select {
+    width: calc(100% - 20px);
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.table tr td input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #dd2c18;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.table tr td input[type="submit"]:hover {
+    background-color: #e86460;
+    color: #333;
+}
+
+.result {
+    flex: 1;
+    background-color: #fff;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.result h1 {
+    text-align: center;
+}
+
+.stocktable{
+    margin: 10px;
+
+}
+
+.row{
+
+    width:100%;
+    text-align: center;
+    font-size:medium;
+}
+
+th{
+    padding: 5px;
 }
