@@ -1,26 +1,29 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
-html{
+html {
     font-size: 62.5%;
-    /* 1rem=10px */
+    font-family: 'Times New Roman', Times, serif
+        /* 1rem=10px */
 }
+
 /* FOR ALL ANCHOR TAG */
-a{
+a {
     text-decoration: none;
     color: black;
 }
+
 /* FOR ALL LIST TAGS */
 
-li{
+li {
     list-style: none;
 }
+
 /* FOR ALL THE BUTTON */
-.btn{
+.btn {
     display: inline;
     margin-top: -0.5rem;
     padding: 0.5rem 2rem;
@@ -35,70 +38,74 @@ li{
     -o-border-radius: 0.6rem;
 }
 
-.btn:hover{
-    background-color: white;
-    color: black;
+.btn:hover {
+    background-color: rgb(227, 13, 13);
+    color: rgb(255, 255, 255);
     font-weight: 700;
     cursor: pointer;
-    
-}
-/* FOR ALL THE CONTAINER  */
-.container{
-    max-width: 142rem;
-    margin: 0  auto;
-    padding: 7.88rem 2.4rem;
-}
-/* FOR ALL THE GRIDS */
-.grid{
-    display: grid;
-}
-.grid-two--cols{
-    grid-template-columns: repeat(2,1fr);
-}
-.grid-three--cols{
-    grid-template-columns: repeat(3,1fr);
+
 }
 
-.grid-four--cols{
-    grid-template-columns: repeat(4,1fr);
+/* FOR ALL THE CONTAINER  */
+.container {
+    max-width: 142rem;
+    margin: 0 auto;
+    padding: 7.88rem 2.4rem;
+}
+
+/* FOR ALL THE GRIDS */
+.grid {
+    display: grid;
+}
+
+.grid-two--cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three--cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four--cols {
+    grid-template-columns: repeat(4, 1fr);
 }
 
 /* NAVBAR STARTS FROM HERE */
-.section-navbar{
+.section-navbar {
     width: 100%;
     height: auto;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
-    
+
     /* background-color: chocolate; */
-    
+
 }
 
- .section-navbar .container{
-    display: flex; 
-     justify-content: space-between;
-     align-items: center;
-     padding: 1rem 0 1rem 3rem;
-     
-     
-
-     & .navbar-brand{
-        font-size: 4rem;
-    font-weight: bold;
-    margin: 0 0 0 4rem;
-     }
-
-    & .logo{
-        color: rgb(181, 9, 9);
-        
-    }
-   
-}
-
-.section-navbar .navbar ul{
+.section-navbar .container {
     display: flex;
-    gap: 7rem; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 3rem;
+
+
+
+    & .navbar-brand {
+        font-size: 4rem;
+        font-weight: bold;
+        margin: 0 0 0 4rem;
+    }
+
+    & .logo {
+        color: rgb(181, 9, 9);
+
+    }
+
+}
+
+.section-navbar .navbar ul {
+    display: flex;
+    gap: 7rem;
     font-size: 2rem;
-    
+
 
     & li a {
         text-transform: uppercase;
@@ -106,8 +113,8 @@ li{
         display: inline-block;
         position: relative;
     }
-   
-    & .navbar-btn{
+
+    & .navbar-btn {
         position: absolute;
         right: 8%;
     }
@@ -118,43 +125,44 @@ li{
 /* NAVBAR ENDS FROM HERE */
 
 
-main{
+main {
     position: relative;
     /* background-color: brown; */
     width: 100%;
     height: auto;
+
     /* background: rgb(251,251,251);
 background: linear-gradient(90deg, rgba(251,251,251,1) 5%, rgba(245,15,15,0.5551470588235294) 69%); */
-.custom-shape-divider-bottom-1714063182 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
+    .custom-shape-divider-bottom-1714063182 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
 
-.custom-shape-divider-bottom-1714063182 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 69px;
-}
+    .custom-shape-divider-bottom-1714063182 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 69px;
+    }
 
-.custom-shape-divider-bottom-1714063182 .shape-fill {
-    fill: #FC2D2D;
-}
+    .custom-shape-divider-bottom-1714063182 .shape-fill {
+        fill: #FC2D2D;
+    }
 }
 
 /* FOR BOTH THE GRIDS IN HERO SECTION  */
 
-.section-hero .grid{
+.section-hero .grid {
     align-items: center;
-    gap:8rem;
+    gap: 8rem;
     padding: 2rem;
     margin-bottom: 2.4rem;
-   
+
     /* padding-top: 7rem; */
 
     /* & .hero-subheading{
@@ -166,43 +174,47 @@ background: linear-gradient(90deg, rgba(251,251,251,1) 5%, rgba(245,15,15,0.5551
 
     } */
 
-    & .hero-heading{
+    & .hero-heading {
         font-size: 3.5rem;
         color: red;
     }
 
-    & .hero-para{
+    & .hero-para {
         color: rgb(3, 13, 21);
         margin: 2rem;
         line-height: 1.5;
         font-size: 2rem;
     }
-    & .hero-para1{
+
+    & .hero-para1 {
         font-size: 3rem;
         padding-top: 1rem;
         padding-left: 2rem;
     }
 
-    & .hero-icons{
-        & .icon-h{
+    & .hero-icons {
+        & .icon-h {
             font-size: 2rem;
             margin-top: 2rem;
         }
-        & .icon-para{
+
+        & .icon-para {
             font-size: 2rem;
         }
     }
-    & .hero-icon-style{
-        & .fa-solid{
+
+    & .hero-icon-style {
+        & .fa-solid {
             font-size: 5rem;
             color: #FC2D2D;
             padding-top: 1rem;
-            
+
         }
     }
-    
+
 }
-.hero-image{
+
+.hero-image {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -210,28 +222,30 @@ background: linear-gradient(90deg, rgba(251,251,251,1) 5%, rgba(245,15,15,0.5551
 
     & .hero-image-overlap {
         width: 50rem;
-    
-        & .para{
+
+        & .para {
             font-size: 2rem;
-        }   }
+        }
+    }
 }
-.hero-image img{
+
+.hero-image img {
 
     width: 80%;
     height: 30rem;
-    
+
     box-shadow: rgb(238, 222, 227);
 }
 
 
-.conatiner{
-    & .info-div{
+.conatiner {
+    & .info-div {
         background-color: #FC2D2D;
         border-radius: 2rem;
         -webkit-border-radius: 2rem;
         -moz-border-radius: 2rem;
         -ms-border-radius: 2rem;
         -o-border-radius: 2rem;
-}
+    }
 
 }

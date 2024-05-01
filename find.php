@@ -25,7 +25,7 @@
         <!-- BRAND NAME -->
         <div class="container">
             <div class="navbar-brand">
-                <a href="index.html" class="logo">क्षत Suraksha</a>
+                <a href="index.html" class="logo" style="font-family: 'Times New Roman', Times, serif">क्षत Suraksha</a>
             </div>
 
         </div>
@@ -108,14 +108,12 @@
                     $blood = $_POST['blood']; // Assuming you are passing the address from the form
                     if ($blood == "") {
                         $sql = "SELECT * FROM blood WHERE AREA = '$address';";
-                    }
-                    elseif ($address == null) {
+                    } elseif ($address == null) {
                         $sql = "SELECT * FROM blood WHERE BLOODGROUP = '$blood';";
-                    }
-                    else{
+                    } else {
                         $sql = "SELECT * FROM blood WHERE AREA = '$address' AND BLOODGROUP = '$blood';";
                     }
-                
+
                     // Construct SQL query to check if the address exists in the database
                     // $sql = "SELECT * FROM blood WHERE ((AREA = '$address' AND BLOODGROUP = '$blood') OR (AREA = '$address' AND BLOODGROUP = '') OR (BLOODGROUP = '$blood' AND AREA = ''));"; // Replace 'your_table' with your table name and 'address' with your column name
                     echo "
